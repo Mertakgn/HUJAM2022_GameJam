@@ -186,13 +186,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336845882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.018505573, y: 0, z: -10}
+  m_LocalPosition: {x: 0.045321465, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1023391572}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375685178
 GameObject:
@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.018505573, y: 0, z: -10}
+  m_LocalPosition: {x: 0.045321465, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -769,7 +769,7 @@ Transform:
   - {fileID: 711086587}
   - {fileID: 1903459607}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1182675116
 Rigidbody2D:
@@ -839,6 +839,7 @@ MonoBehaviour:
   popupPanel: {fileID: 375685178}
   cameraCenter: {fileID: 1936053178}
   hoverMaterial: {fileID: 2100000, guid: 299765cc473f55442b8f4be7c7ad3bb5, type: 2}
+  tempUiConnectionPoint: {fileID: 0}
 --- !u!114 &1182675120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,7 +885,7 @@ Transform:
   m_Children:
   - {fileID: 811513778}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1229769569
 SpriteRenderer:
@@ -1032,8 +1033,69 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1450042333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6455799514694293912, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558610856886398513, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_Name
+      value: SmallEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.857253
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.414457
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035785186574162127, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 91c3b9feb883b444782079e88d2cce55, type: 3}
 --- !u!1 &1602401639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1190,7 @@ RectTransform:
   m_Children:
   - {fileID: 375685179}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
