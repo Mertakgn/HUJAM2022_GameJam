@@ -7,10 +7,13 @@ public class ConnectionScript : MonoBehaviour
 
     private bool collected;
     [SerializeField] GameObject tempCollectable, tempPlayer;
-    
+
     [SerializeField] GameObject popupPanel, cameraCenter;
 
     [SerializeField] Material hoverMaterial;
+
+
+    [SerializeField] GameObject tempUiConnectionPoint;
 
     void Start()
     {
@@ -27,16 +30,18 @@ public class ConnectionScript : MonoBehaviour
         }
         if (popupPanel.activeInHierarchy)
         {
+
+
             Debug.Log("AKTÝF");
-            RaycastHit raycastHit;
+            RaycastHit2D raycastHit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out raycastHit, 100f))
+            raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f);
+            if (raycastHit.collider != null)
             {
-                    Debug.Log("NULL DEÝL"); 
-                if (raycastHit.transform != null)
-                {
-                    CurrentClickedGameObject(raycastHit.transform.gameObject);
-                }
+
+                
+                CurrentClickedGameObject(raycastHit.collider.gameObject);
+
             }
         }
 
@@ -47,9 +52,18 @@ public class ConnectionScript : MonoBehaviour
     {
         if (gameObject.tag == "Connection")
         {
-            Debug.Log("CONNECTIONA GELDÝ MOUSE");
+            Debug.Log("connection");
+            tempUiConnectionPoint = gameObject.gameObject;
             gameObject.GetComponent<SpriteRenderer>().material = hoverMaterial;
         }
+        else
+        {
+            if(tempUiConnectionPoint!=null)
+                tempUiConnectionPoint.GetComponent<SpriteRenderer>().material = null;
+
+
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,7 +94,7 @@ public class ConnectionScript : MonoBehaviour
 
         }
     }
-   
+
 
 
 
