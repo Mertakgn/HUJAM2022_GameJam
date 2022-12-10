@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3856056524221306053}
   - component: {fileID: 3856056524221306107}
   - component: {fileID: 3856056524221306052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Connection1 (2)
   m_TagString: Connection
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856056524221306054}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 8.44, y: 0.09, z: 0}
-  m_LocalScale: {x: 50.4, y: 50.4, z: 50.4}
+  m_LocalPosition: {x: 8.43, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3856056526076137136}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 110
+  m_Sprite: {fileID: 21300000, guid: 7a0b1020b0e034944a36e2ffa7b8508e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030234915, y: 0.005652208}
-  m_Size: {x: 0.10199784, y: 0.12314875}
+  m_Offset: {x: -0.17461777, y: 12.211633}
+  m_Size: {x: 19.451462, y: 27.487303}
   m_Direction: 0
 --- !u!1 &3856056524262879201
 GameObject:
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3856056524262879200}
   - component: {fileID: 3856056524262879207}
   - component: {fileID: 3856056524262879206}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Connection1
   m_TagString: Connection
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -127,8 +127,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856056524262879201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: 9.52, z: 0}
-  m_LocalScale: {x: 50.4, y: 50.4, z: 50.4}
+  m_LocalPosition: {x: 0.45, y: 8.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3856056526076137136}
@@ -174,8 +174,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 110
+  m_Sprite: {fileID: 21300000, guid: 7a0b1020b0e034944a36e2ffa7b8508e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,8 +199,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030234915, y: 0.005652208}
-  m_Size: {x: 0.10199784, y: 0.12314875}
+  m_Offset: {x: -0.17461777, y: 12.211633}
+  m_Size: {x: 19.451462, y: 27.487303}
   m_Direction: 0
 --- !u!1 &3856056524749709004
 GameObject:
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 3856056524749708995}
   - component: {fileID: 3856056524749708993}
   - component: {fileID: 3856056524749708994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Connection1 (3)
   m_TagString: Connection
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -228,8 +228,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856056524749709004}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.002, y: -9.27, z: 0}
-  m_LocalScale: {x: 50.4, y: 50.4, z: 50.4}
+  m_LocalPosition: {x: -0.002, y: -8.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3856056526076137136}
@@ -275,8 +275,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 110
+  m_Sprite: {fileID: 21300000, guid: 7a0b1020b0e034944a36e2ffa7b8508e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -300,8 +300,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030234915, y: 0.005652208}
-  m_Size: {x: 0.10199784, y: 0.12314875}
+  m_Offset: {x: -0.17461777, y: 12.211633}
+  m_Size: {x: 19.451462, y: 27.487303}
   m_Direction: 0
 --- !u!1 &3856056525535834919
 GameObject:
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 3856056525535834918}
   - component: {fileID: 3856056525535834916}
   - component: {fileID: 3856056525535834917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Connection1 (1)
   m_TagString: Connection
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -329,8 +329,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856056525535834919}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -9.18, y: 0, z: 0}
-  m_LocalScale: {x: 50.4, y: 50.4, z: 50.4}
+  m_LocalPosition: {x: -8.86, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 50.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3856056526076137136}
@@ -376,8 +376,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 110
+  m_Sprite: {fileID: 21300000, guid: 7a0b1020b0e034944a36e2ffa7b8508e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -401,8 +401,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030234915, y: 0.005652208}
-  m_Size: {x: 0.10199784, y: 0.12314875}
+  m_Offset: {x: -0.17461777, y: 12.211633}
+  m_Size: {x: 19.451462, y: 27.487303}
   m_Direction: 0
 --- !u!1 &3856056526076137138
 GameObject:
@@ -485,7 +485,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 70aa199039f52584b830d67a0b4f07fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -531,8 +531,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00045523042, y: 0.0017807272}
-  m_Size: {x: 0.123166874, y: 0.12476514}
+  m_Offset: {x: -0.07391977, y: -0.29935503}
+  m_Size: {x: 10.676654, y: 11.366305}
   m_Direction: 0
 --- !u!114 &3856056526076137141
 MonoBehaviour:
@@ -564,9 +564,11 @@ MonoBehaviour:
   tempCollectable: {fileID: 0}
   vCam: {fileID: 0}
   tempUiConnectionPoint: {fileID: 0}
-  hoverSprite: {fileID: 21300000, guid: a6fbd5a181bc51e42a61a73fe8d727c8, type: 3}
-  defultSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  rb: {fileID: 3856056526076137143}
+  hoverSprite: {fileID: 21300000, guid: ed62d1ecbf185ae46a3a4ac44d3a6772, type: 3}
+  defultSprite: {fileID: 21300000, guid: 7a0b1020b0e034944a36e2ffa7b8508e, type: 3}
   cameraGO: {fileID: 0}
+  _tempOrderLayer: 100
 --- !u!114 &3856056526076137131
 MonoBehaviour:
   m_ObjectHideFlags: 0
