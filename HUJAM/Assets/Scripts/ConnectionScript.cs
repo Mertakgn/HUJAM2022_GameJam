@@ -1,48 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ConnectionScript : MonoBehaviour
 {
 
-    private bool collected;
-    [SerializeField] GameObject tempCollectable, tempPlayer;
-
-    [SerializeField] GameObject popupPanel, cameraCenter;
-
-    [SerializeField] Material hoverMaterial;
-
-
+    public bool collected;
+    [SerializeField] GameObject tempCollectable;
+    [SerializeField] CinemachineVirtualCamera vCam;
     [SerializeField] GameObject tempUiConnectionPoint;
 
-    void Start()
-    {
+    RaycastHit2D raycastHit;
+    Ray ray;
+    public Sprite hoverSprite, defultSprite;
 
-
-    }
-
+    public Camera cameraGO;
 
     void Update()
     {
         if (collected)
         {
-            tempCollectable.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
-        }
-        if (popupPanel.activeInHierarchy)
-        {
 
-
-            Debug.Log("AKTÝF");
-            RaycastHit2D raycastHit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            raycastHit = Physics2D.Raycast(ray.origin, ray.direction, 100f);
+            Debug.Log("Aktif");
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            raycastHit = Physics2D.Raycast(ray.origin, ray.direction);
             if (raycastHit.collider != null)
             {
+                Debug.Log("Inside If");
 
-                
                 CurrentClickedGameObject(raycastHit.collider.gameObject);
 
             }
+            else
+            {
+                if (tempUiConnectionPoint != null)
+                {
+                    SetSpriteDefult();
+                }
+            }
+
         }
 
 
@@ -50,20 +47,67 @@ public class ConnectionScript : MonoBehaviour
     }
     public void CurrentClickedGameObject(GameObject gameObject)
     {
-        if (gameObject.tag == "Connection")
+        if (gameObject.CompareTag("Connection"))
         {
-            Debug.Log("connection");
+            Debug.Log("Inside Tag");
+
+
             tempUiConnectionPoint = gameObject.gameObject;
-            gameObject.GetComponent<SpriteRenderer>().material = hoverMaterial;
+            tempUiConnectionPoint.GetComponent<SpriteRenderer>().sprite = hoverSprite;
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+
+                //tempCollectable.transform.localEulerAngles = new Vector3(0, 0, transform.rotation.z + tempUiConnectionPoint.transform.rotation.z);
+                tempCollectable.transform.parent = tempUiConnectionPoint.transform;
+                tempCollectable.transform.localEulerAngles = new Vector3(0, 0, tempUiConnectionPoint.transform.rotation.z);
+                tempCollectable.transform.localPosition = new Vector3(0, 0, 0);
+
+                foreach (Transform child in tempCollectable.transform)
+                {
+                    child.transform.parent = transform;
+                }
+
+                tempCollectable.transform.parent = transform;
+                Destroy(tempUiConnectionPoint);
+                ResumeGame();
+            }
         }
         else
         {
-            if(tempUiConnectionPoint!=null)
-                tempUiConnectionPoint.GetComponent<SpriteRenderer>().material = null;
+            SetSpriteDefult();
+        }
 
+
+    }
+
+    void SetSpriteDefult()
+    {
+        tempUiConnectionPoint.GetComponent<SpriteRenderer>().sprite = defultSprite;
+    }
+
+    void ResumeGame()
+    {
+        GetComponent<PlayerRotation>().enabled = true;
+        GetComponent<PlayerMovement>().enabled = true;
+        collected = false;
+        Time.timeScale = 1;
+
+        var composer = vCam.GetCinemachineComponent<CinemachineFramingTransposer>();
+        composer.m_DeadZoneWidth = 0.35f;
+        composer.m_DeadZoneHeight = 0.35f;
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+
+            if (transform.GetChild(i).CompareTag("Connection"))
+            {
+
+                transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+            }
 
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,7 +115,6 @@ public class ConnectionScript : MonoBehaviour
         if (collision.CompareTag("Collectable"))
         {
 
-            Time.timeScale = 0;
 
 
             tempCollectable = collision.gameObject;
@@ -79,16 +122,18 @@ public class ConnectionScript : MonoBehaviour
             tempCollectable.GetComponent<SpriteRenderer>().sortingOrder = 1;
             collected = true;
             GetComponent<PlayerRotation>().enabled = false;
-            tempPlayer = Instantiate(this.gameObject, new Vector3(cameraCenter.transform.position.x, cameraCenter.transform.position.y, 1f), Quaternion.identity) as GameObject;
-            for (int i = 0; i < tempPlayer.transform.childCount; i++)
+            GetComponent<PlayerMovement>().enabled = false;
+            for (int i = 0; i < transform.childCount; i++)
             {
-                tempPlayer.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = true;
+                transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = true;
 
             }
-            tempPlayer.GetComponent<SpriteRenderer>().sortingOrder = 1;
-            popupPanel.SetActive(true);
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
+            var composer = vCam.GetCinemachineComponent<CinemachineFramingTransposer>();
+            composer.m_DeadZoneWidth = 0;
+            composer.m_DeadZoneHeight = 0;
 
-
+            Time.timeScale = 0.1f;
 
 
 

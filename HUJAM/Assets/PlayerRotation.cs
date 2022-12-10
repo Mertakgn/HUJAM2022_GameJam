@@ -7,12 +7,9 @@ public class PlayerRotation : MonoBehaviour
     private Vector3 mousePos;
     private Vector3 objectPos;
     private float angle;
-    void Start()
-    {
-        
-    }
 
-    void Update()
+
+    void FixedUpdate()
     {
         mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
@@ -22,6 +19,6 @@ public class PlayerRotation : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle-90));
     }
 }

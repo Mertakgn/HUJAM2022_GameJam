@@ -7,11 +7,6 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal, vertical;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
-    void Start()
-    {
-
-    }
-
 
     void Update()
     {

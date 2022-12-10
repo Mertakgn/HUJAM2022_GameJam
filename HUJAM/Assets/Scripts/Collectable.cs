@@ -5,16 +5,7 @@ using UnityEngine;
 public interface Collectable 
 {
     public bool Collected { get; set; }
-    void Start()
-    {
-        
-    }
 
-   
-    void Update()
-    {
-        
-    }
 
   
     
