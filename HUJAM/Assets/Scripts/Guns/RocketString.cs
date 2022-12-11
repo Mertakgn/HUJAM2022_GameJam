@@ -9,7 +9,7 @@ public class RocketString : MonoBehaviour , ICanDealDamage
    [SerializeField] float dirRandomizer;
     
 
-     float curtimer, maxtimer;
+     float curtimer, maxtimer, midTimer;
 
     [SerializeField] float moveSpeed;
 
@@ -18,12 +18,17 @@ public class RocketString : MonoBehaviour , ICanDealDamage
 
     [SerializeField] Transform playerTransform;
 
+
+    float playerup;
+
     private void Start()
     {
-        maxtimer = 1f;
+        maxtimer = 1.3f;
+        midTimer = 0.7f;
         curtimer = maxtimer;
         dirRandomizer = Random.Range(-180, 180);
-        
+        playerTransform = GameObject.FindObjectOfType<PlayerMovement>().transform;
+        playerup = playerTransform.eulerAngles.z;
         Destroy(gameObject, 2f);
     }
 
@@ -35,19 +40,27 @@ public class RocketString : MonoBehaviour , ICanDealDamage
 
     void RandomMovement()
     {
-        
-        if(curtimer >=0)
+        if(curtimer >=1)
         {
-            playerTransform = GameObject.FindObjectOfType<PlayerMovement>().transform;
+            Debug.Log("Player  " + playerup + "  Local Rot: " + transform.rotation.z);
             curtimer -= Time.deltaTime;
-            Quaternion tempTarget = Quaternion.Euler(transform.rotation.x, transform.rotation.y, Mathf.Lerp(transform.rotation.z, dirRandomizer, 1f));
-            transform.rotation = Quaternion.Lerp(transform.rotation,tempTarget,Time.deltaTime*1f);
-            transform.Translate(new Vector3(transform.rotation.z,50f, 0f) * Time.deltaTime*moveSpeed);
+            //Quaternion tempTarget = Quaternion.Euler(transform.rotation.x, transform.rotation.y, dirRandomizer );
+            Quaternion tempTarget = Quaternion.Euler(transform.rotation.x, transform.rotation.y, playerup);
+            transform.rotation = Quaternion.Lerp(transform.rotation,tempTarget ,Time.deltaTime * 5f);
+            transform.Translate( transform.up * Time.deltaTime*moveSpeed);
+        }
+        else if (curtimer >= 0.5f)
+        {
+            Debug.Log("Player  " + playerup + "  Local Rot: " + transform.rotation.z);
+            curtimer -= Time.deltaTime;
+            Quaternion tempTarget = Quaternion.Euler(transform.rotation.x, transform.rotation.y, dirRandomizer);
+            transform.rotation = Quaternion.Lerp(transform.rotation, tempTarget, Time.deltaTime * 5f);
+            transform.Translate(transform.up * Time.deltaTime * moveSpeed);
         }
         else
         {
             dirRandomizer = Random.Range(-180,180);
-            curtimer = maxtimer;
+            curtimer = midTimer;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

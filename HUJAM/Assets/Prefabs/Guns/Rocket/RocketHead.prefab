@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirRandomizer: 0
-  moveSpeed: 3
+  moveSpeed: 100
   damage: 20
-  rocketExplodeEffect: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!70 &439406976920423868
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
