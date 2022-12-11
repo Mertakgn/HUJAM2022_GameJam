@@ -213,7 +213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8568086697309817770}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9df020d7b6f716449c644e98f627fb3, type: 3}
   m_Name: 
@@ -229,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8568086697685829972}
   - component: {fileID: 8568086697685829973}
+  - component: {fileID: 304157971}
   m_Layer: 0
   m_Name: Freeze
   m_TagString: Untagged
@@ -267,6 +268,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.13899803, y: 8.154514}
   m_Size: {x: 23.573574, y: 23.573574}
   m_Direction: 0
+--- !u!114 &304157971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568086697685829975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f159a40a82665de4dad458e1966445bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowAmount: 0
 --- !u!1001 &376832975698036025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,6 +288,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8568086697309817768}
     m_Modifications:
+    - target: {fileID: 1791101161985874976, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
+      propertyPath: maskObjectSpriteRenderer
+      value: 
+      objectReference: {fileID: 5258156917770970048}
     - target: {fileID: 3710185880238022262, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
       propertyPath: m_LocalScale.x
       value: 53.7273
@@ -301,6 +319,10 @@ PrefabInstance:
     - target: {fileID: 4773629545432974719, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603179716138952441, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6282260900927732855, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
       propertyPath: m_Sprite
@@ -356,6 +378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
+--- !u!212 &5258156917770970048 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5603179716138952441, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}
+  m_PrefabInstance: {fileID: 376832975698036025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7600388245596213869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7800453698700941140, guid: 62cc2715c9485b446bbb5428a3c718c9, type: 3}

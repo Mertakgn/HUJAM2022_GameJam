@@ -83,6 +83,7 @@ MonoBehaviour:
   prefabObj: {fileID: 4698682981687698649, guid: 21783e7b60d2fc84ebe675c29d717eb7, type: 3}
   ObjGO: {fileID: 0}
   SpawnPoint: {fileID: 2394506012091750436}
+  rocketLaunchParticle: {fileID: 7433478170864412082}
 --- !u!70 &8407043940457165825
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -304,6 +305,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7114317577204567021, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114317577204567021, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.76
       objectReference: {fileID: 0}
@@ -312,11 +317,20 @@ PrefabInstance:
       value: RocketSmokeEffect
       objectReference: {fileID: 0}
     - target: {fileID: 7114317578538809808, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114317578538809808, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
+--- !u!198 &7433478170864412082 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7114317577204567021, guid: 8f966860b1f81d64281b505a007a701f, type: 3}
+  m_PrefabInstance: {fileID: 401426368256470623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7433478170864412083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7114317577204567020, guid: 8f966860b1f81d64281b505a007a701f, type: 3}

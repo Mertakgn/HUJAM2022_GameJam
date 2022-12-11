@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameCollider: {fileID: 7931289309559680189}
+  FlameVfx: {fileID: 3663707062298508520}
 --- !u!1 &7931289309559680187
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,8 +409,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlameThrowerVFX
       objectReference: {fileID: 0}
+    - target: {fileID: 3098331540855634238, guid: 246e12a0070f450419564db468f62b72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246e12a0070f450419564db468f62b72, type: 3}
+--- !u!1 &3663707062298508520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3098331540855634238, guid: 246e12a0070f450419564db468f62b72, type: 3}
+  m_PrefabInstance: {fileID: 1740472169834661334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3663707062298508525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3098331540855634235, guid: 246e12a0070f450419564db468f62b72, type: 3}

@@ -296,10 +296,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2918815699023269096}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7d90719ca84614787d83bda3294c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 350
   sawTransform: {fileID: 2918815698264340851}
+  damage: 20

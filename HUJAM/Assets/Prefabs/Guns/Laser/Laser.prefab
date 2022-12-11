@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6014f720602084a9a21c6e9924ffaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabObj: {fileID: 7708845328578603479, guid: 5ee3c2ed84db81f4898d947f27136b82, type: 3}
+  prefabObj: {fileID: 158496670806927421, guid: 7e679b96276e62c468e7ae9086b5b803, type: 3}
   ObjGO: {fileID: 0}
   SpawnPoint: {fileID: 4120402981780812364}
 --- !u!1 &4120402981780812365
