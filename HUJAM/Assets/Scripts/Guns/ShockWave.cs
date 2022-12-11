@@ -8,18 +8,26 @@ public class ShockWave : Collectable
     private float maxtimer;
     private float curtimer;
     [SerializeField] private Transform waveTransform;
+    private bool _waveActive;
 
-
-
+    [SerializeField] GameObject waveFx;
     private void Start()
     {
+        _waveActive = true; 
         maxtimer = 4f;
         curtimer = maxtimer;
+        if(_waveActive)
+        {
+            waveFx.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(_waveActive)
+        {
+
         if (curtimer >= 0)
         {
             curtimer -= Time.deltaTime;
@@ -34,6 +42,7 @@ public class ShockWave : Collectable
             ResetSize();
             curtimer = maxtimer;
 
+        }
         }
 
     
@@ -51,4 +60,7 @@ public class ShockWave : Collectable
     }
 
    
+    
+
+
 }

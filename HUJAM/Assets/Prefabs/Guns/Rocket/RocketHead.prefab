@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4698682981687698654}
   - component: {fileID: 4698682981687698655}
   - component: {fileID: 4698682981687698652}
+  - component: {fileID: 439406976920423868}
   m_Layer: 0
   m_Name: RocketHead
   m_TagString: Untagged
@@ -102,6 +103,23 @@ MonoBehaviour:
   dirRandomizer: 0
   moveSpeed: 3
   damage: 20
+  rocketExplodeEffect: {fileID: 0}
+--- !u!70 &439406976920423868
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698682981687698649}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024646282, y: -4.435884}
+  m_Size: {x: 4.789196, y: 9.94}
+  m_Direction: 0
 --- !u!1001 &2621343535889748823
 PrefabInstance:
   m_ObjectHideFlags: 0

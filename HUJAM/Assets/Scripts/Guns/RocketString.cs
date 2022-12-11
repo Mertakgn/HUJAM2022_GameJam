@@ -16,6 +16,8 @@ public class RocketString : MonoBehaviour , ICanDealDamage
     [SerializeField] float damage;
     public float Damage { get => damage; set => damage = value; }
 
+    [SerializeField] Transform playerTransform;
+
     private void Start()
     {
         maxtimer = 1f;
@@ -36,6 +38,7 @@ public class RocketString : MonoBehaviour , ICanDealDamage
         
         if(curtimer >=0)
         {
+            playerTransform = GameObject.FindObjectOfType<PlayerMovement>().transform;
             curtimer -= Time.deltaTime;
             Quaternion tempTarget = Quaternion.Euler(transform.rotation.x, transform.rotation.y, Mathf.Lerp(transform.rotation.z, dirRandomizer, 1f));
             transform.rotation = Quaternion.Lerp(transform.rotation,tempTarget,Time.deltaTime*1f);
@@ -52,12 +55,16 @@ public class RocketString : MonoBehaviour , ICanDealDamage
         if (collision.GetComponent<Enemy>() != null)
         {
             DealDamage(Damage, collision.GetComponent<Enemy>());
+            
+            Destroy(gameObject);
         }
     }
 
     public void DealDamage(float damage, Enemy enemy)
     {
         enemy.TakeDamage(damage);
+       
+
 
     }
 }

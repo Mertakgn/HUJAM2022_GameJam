@@ -12,10 +12,9 @@ public class FreezeEffect : MonoBehaviour
     private readonly float _secondsUntillCompleted = 2;
     private float _progress;
     [SerializeField] SpriteRenderer maskObjectSpriteRenderer;
-    private float curtime, maxtime;
+    [SerializeField] private float curtime, maxtime;
     bool test = false;
-    float t = 0;
-    float opacityRate;
+   
     private void Start()
     {
         maxtime = 5f;
@@ -26,7 +25,7 @@ public class FreezeEffect : MonoBehaviour
         if (curtime <= 0)
         {
 
-            StartCoroutine(ScaleMask());
+           ScaleMask();
             
             //maskObjectSpriteRenderer.color = new Color(255, 255, 255, opacityRate);
             curtime = maxtime;
@@ -34,56 +33,58 @@ public class FreezeEffect : MonoBehaviour
         }
         else
         {
-            
+
             //maskObjectSpriteRenderer.color = new Color(255, 255, 255, opacityRate);
-            StartCoroutine(HideSprite());
+            HideSprite();
             curtime -= Time.deltaTime;
         }
     }
 
 
-    private IEnumerator ChangeMask()
-    {
-        StartCoroutine(ScaleMask());
-        yield return new WaitUntil(() => test);
-       
-    }
+    
 
-    private IEnumerator ScaleMask()
-    {
-        while (_progress < _secondsUntillCompleted)
-        {
-            maskObjectSpriteRenderer.color = new Color(maskObjectSpriteRenderer.color.r,
-                 maskObjectSpriteRenderer.color.g, maskObjectSpriteRenderer.color.b, 255f);
-            _progress += Time.deltaTime;
-            _interpolation = _progress / _secondsUntillCompleted;
-
-            /*maskObject.transform.localScale =
-                new Vector3(maskObject.transform.localScale.x, Mathf.Lerp(0f, 27f, _interpolation),
-                    maskObject.transform.localScale.z);*/
-
-            maskObject.transform.localScale = Vector3.Lerp(maskObject.transform.localScale,
-                new Vector3(maskObject.transform.localScale.x, 200f, maskObject.transform.localScale.z), _interpolation);
-
-            yield return null;
-            
-        }
-        _progress = 0;
-        test = true;
-    }
-
-    private IEnumerator HideSprite()
+    void ScaleMask()
     {
         var temp = maskObjectSpriteRenderer.color;
-
-        while (maskObjectSpriteRenderer.color.a > 0f)
+        if(maskObjectSpriteRenderer.color.a < 255)
         {
-            temp.a -= 0.001f;
+            temp.a += 0.1f;
             maskObjectSpriteRenderer.color = temp;
-            yield return new WaitForSecondsRealtime(20f);
         }
-       
     }
+    //private IEnumerator ScaleMask()
+    //{
+    //    var temp = maskObjectSpriteRenderer.color;
+
+    //    while (maskObjectSpriteRenderer.color.a < 255)
+    //    {
+    //        temp.a += 0.01f;
+    //        maskObjectSpriteRenderer.color = temp;
+    //        yield return null;
+    //    }
+    //}
+
+    void HideSprite()
+    {
+        var temp = maskObjectSpriteRenderer.color;
+        if (maskObjectSpriteRenderer.color.a >0)
+        {
+            temp.a -= 0.01f;
+            maskObjectSpriteRenderer.color = temp;
+        }
+    }
+    //private IEnumerator HideSprite()
+    //{
+    //    var temp = maskObjectSpriteRenderer.color;
+
+    //    while (maskObjectSpriteRenderer.color.a > 0f)
+    //    {
+    //        temp.a -= 0.01f;
+    //        maskObjectSpriteRenderer.color = temp;
+    //        yield return null;
+    //    }
+       
+    //}
 
 
     

@@ -12,7 +12,7 @@ public class RangedEnemy : Enemy
     
     private void FixedUpdate()
     {
-        Move();
+        //Move();
     }
 
     public override void Move()

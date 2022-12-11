@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31106172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.857745, y: -1.0100038, z: -10}
+  m_LocalPosition: {x: -9.858134, y: -1.0100038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: b41695d91c0fbb54ca68a516cab6cb5f, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!70 &267936198
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -479,6 +480,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 446651425, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+      propertyPath: waveFx
+      value: 
+      objectReference: {fileID: 1077746937}
+    - target: {fileID: 5981882665613189145, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5981882665775987493, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -529,6 +538,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5981882665775987495, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348179560781098262, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348179560781098264, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348179560781098264, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+      propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -644,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: e520aae4fb5467544bb55c17ac6c0547, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!4 &411072641
 Transform:
   m_ObjectHideFlags: 0
@@ -652,7 +674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411072639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0279264, y: 0.41607177, z: -2.1577468}
+  m_LocalPosition: {x: -117.2, y: 0.41607177, z: -2.1577468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -712,7 +734,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -800,6 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: e520aae4fb5467544bb55c17ac6c0547, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!114 &604762182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +876,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -991,7 +1014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1031,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: ba85e13aead99ab488009fdaf3a980c9, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!70 &720773711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1068,6 +1092,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1077746937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7348179560781098262, guid: b9fe44682af01e94da449dc1701e333a, type: 3}
+  m_PrefabInstance: {fileID: 339002551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106705023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1171,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1182,6 +1211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: 2317d394eabe227478a0835919e70491, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!70 &1106705029
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1391,6 +1421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0a52fcdc0b1c54b83228c1d359d773, type: 3}
+--- !u!198 &1790808818 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7433478170864412082, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
+  m_PrefabInstance: {fileID: 1914961489628920821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891289782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valuesSO: {fileID: 11400000, guid: b14c7bce7b00f604291e7c3210ced045, type: 2}
+  explodeParticle: {fileID: 9212034957704582600, guid: 9590b16026a96e94fb00652a81d14da3, type: 3}
 --- !u!114 &1891289784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,7 +1514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: c91f23325174b244580e8193fb8e9606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1563,7 +1599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664562537939115284, guid: c4cb9c89705ab7740b60536974416247, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.857745
+      value: -9.858134
       objectReference: {fileID: 0}
     - target: {fileID: 4664562537939115284, guid: c4cb9c89705ab7740b60536974416247, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1759,6 +1795,10 @@ PrefabInstance:
       propertyPath: damage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4321738623193688293, guid: cbe10bb163a9d3b4b8dd6b35dcee2ad5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe10bb163a9d3b4b8dd6b35dcee2ad5, type: 3}
 --- !u!1001 &1914961489628920821
@@ -1768,6 +1808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2394506013073486970, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
+      propertyPath: rocketLaunchParticle
+      value: 
+      objectReference: {fileID: 1790808818}
     - target: {fileID: 2394506013073486972, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -1814,6 +1858,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394506013073486973, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433478170864412080, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433478170864412082, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433478171661014927, guid: 43c0d67eae4d93e4291c0d5bd4f8ae94, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
